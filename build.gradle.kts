@@ -1,6 +1,6 @@
 plugins {
-    alias(libs.plugins.kotlin.jvm) // Explicitly specify the Kotlin version
-    alias(libs.plugins.kotlin.kapt) // Add Kapt plugin explicitly
+    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.ktor)
 //    alias(libs.plugins.kotlin.plugin.serialization)
 }
@@ -24,14 +24,14 @@ dependencies {
     implementation(libs.ktor.server.host.common)
     implementation(libs.ktor.server.content.negotiation)
     implementation("io.ktor:ktor-server-status-pages:2.3.4")
-    implementation("org.jetbrains.exposed:exposed-core:0.43.0") // Core module
-    implementation("org.jetbrains.exposed:exposed-dao:0.43.0")  // DAO for ORM-like functionality
+    implementation("org.jetbrains.exposed:exposed-core:0.43.0")
+    implementation("org.jetbrains.exposed:exposed-dao:0.43.0")
     implementation("org.jetbrains.exposed:exposed-jdbc:0.43.0")
-    implementation("org.postgresql:postgresql:42.6.0") // Replace with the latest version
+    implementation("org.postgresql:postgresql:42.6.0")
     testImplementation(libs.ktor.client.content.negotiation)
 //    implementation(libs.ktor.serialization.kotlinx.json)
 //    implementation(libs.kotlinx.serialization.json)
-    implementation(libs.ktor.serialization.kotlinx.json) // Use the correct version
+    implementation(libs.ktor.serialization.kotlinx.json)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.ktor.server.netty)
     implementation("io.ktor:ktor-server-websockets:2.2.4")

@@ -24,17 +24,12 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module() {
-    // Create the Dagger component
     val appComponent = DaggerAppComponent.create()
-
-    // Inject dependencies into the Application (if needed)
 //    appComponent.inject(this)
 
-    // Get the repository instance from the Dagger component
     val repository: PostgresTaskRepository = appComponent.postgresTaskRepository()
 
-    // Configure the Ktor server
-    configureSerialization(repository) // Configure JSON serialization with the repository
-    configureDatabases()               // Configure the database setup
-    configureRouting()       // Configure the routing with the repository
+    configureSerialization(repository)
+    configureDatabases()
+    configureRouting()
 }

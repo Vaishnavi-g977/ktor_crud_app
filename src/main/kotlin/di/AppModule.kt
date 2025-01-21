@@ -9,10 +9,9 @@ import javax.inject.Singleton
 @Module
 class AppModule {
 
-    // Provide the PostgresTaskRepository instance
     @Provides
     @Singleton
     fun providePostgresTaskRepository(): PostgresTaskRepository {
-        return PostgresTaskRepository()  // Create and return an instance of PostgresTaskRepository
+        return PostgresTaskRepository()
     }
 }
