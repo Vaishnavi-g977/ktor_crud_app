@@ -1,10 +1,10 @@
 
 [versions]
-kotlin-version = "1.8.22"
-ktor-version = "3.0.3"
+kotlin-version = "1.9.10"
+ktor-version = "2.3.4"
 logback-version = "1.4.14"
 exposed-version = "0.41.1"
-dagger = "2.44"
+dagger = "2.48"
 kotlinx-serialization = "1.5.1"
 
 [libraries]

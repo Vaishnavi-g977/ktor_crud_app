@@ -28,7 +28,6 @@ fun Application.module() {
 //    appComponent.inject(this)
 
     val repository: PostgresTaskRepository = appComponent.postgresTaskRepository()
-
     configureSerialization(repository)
     configureDatabases()
     configureRouting()

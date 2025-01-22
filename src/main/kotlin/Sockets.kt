@@ -1,4 +1,5 @@
 package com.example
+
 import io.ktor.websocket.*
 import io.ktor.server.application.*
 import io.ktor.serialization.*
@@ -18,8 +19,8 @@ import kotlin.time.toKotlinDuration // Import this extension function
 fun Application.configureSockets() {
     install(WebSockets) {
         contentConverter = KotlinxWebsocketSerializationConverter(Json)
-        pingPeriod = Duration.ofSeconds(15).toKotlinDuration() // Convert to kotlin.time.Duration
-        timeout = Duration.ofSeconds(15).toKotlinDuration()    // Convert to kotlin.time.Duration
+        pingPeriod = Duration.ofSeconds(15) // Convert to kotlin.time.Duration
+        timeout = Duration.ofSeconds(15)   // Convert to kotlin.time.Duration
         maxFrameSize = Long.MAX_VALUE
         masking = false
     }
